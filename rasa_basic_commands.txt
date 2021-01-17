@@ -1,0 +1,54 @@
+1. Creating a new virtual enviornment 
+	cmd: python -m venv rasax_env
+	
+2. starting the virtual Enviornemt
+	cmd: rasax_env\Scripts\activate.bat
+	
+3. installing the dependecies and libraries
+	cmd: pip3 install rasa
+		or
+	cmd: pip3 install rasa[full]
+	this command will install all the additional dependencies
+	
+4. Installing depend for Spacy
+	cmd: pip3 install rasa[spacy]
+	cmd: python -m spacy download en_core_web_md
+	cmd: python -m spacy link en_core_web_md en
+	
+5. Installing RASA X
+	cmd: pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple
+	
+6. to extract the dependencies and version in txt file
+	cmd: python -m pip freeze > requirements.txt
+	
+7. to install all the required dependencies
+	cmd: python -m pip install -r requirements.txt
+	
+8. To train the model 
+	cmd: rasa train
+	
+9. To Run the actions (in new command prompt)
+	cmd: rasa run actions --actions actions.actions
+	
+10. To docker rasa ducling starts (in new command prompt)
+	cmd: docker run -p 8000:8000 rasa/duckling
+	
+11. to start the bot (if you want to pass command line argument):-
+	cmd: rasa shell
+
+12. load only nlu model not the core 
+	cmd: rasa shell nlu
+
+13. To run the rasa X GUI
+	cmd: rasa x 
+
+14. download the ngrok to expose the local point
+	link: https://dashboard.ngrok.com/get-started/setup
+
+15. after installing the ngrok
+	ngrok http 5005
+
+https://rasa.com/docs/rasa/connectors/slack
+https://rasa.com/docs/rasa/messaging-and-voice-channels#testing-channels-on-your-local-machine
+https://stackoverflow.com/questions/16512592/login-credentials-not-working-with-gmail-smtp
+	
