@@ -102,7 +102,7 @@ class ActionSendEmail(Action):
     def run(self, dispatcher, tracker, domain):
         from_user = 'zomatoappbot@gmail.com' # create your gmail id and paste here
         to_user = tracker.get_slot('email')
-        password = 'Classic@350' # create your gmail id and paste here
+        password = 'ZomatoApp@108' # create your gmail id and paste here
         server = smtplib.SMTP('smtp.gmail.com',587)
         server.starttls()
         server.login(from_user, password)
